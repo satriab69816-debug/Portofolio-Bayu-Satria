@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Portfolio — Bayu Satria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-page admin-locked">
+<div id="adminLogin" class="admin-login-overlay" aria-modal="true" role="dialog" aria-labelledby="loginTitle">
+  <div class="admin-login-card">
+    <div class="admin-login-logo">Bayu<span>.</span></div>
+    <span class="admin-kicker">PRIVATE AREA</span>
+    <h1 id="loginTitle">Admin Portfolio</h1>
+    <p>Masukkan password untuk masuk ke halaman pengelolaan project.</p>
+    <form id="adminLoginForm" class="admin-login-form" autocomplete="off">
+      <label for="adminPassword">Password</label>
+      <div class="password-wrap">
+        <input id="adminPassword" type="password" inputmode="numeric" maxlength="6" placeholder="Masukkan password" autocomplete="current-password" required autofocus>
+        <button type="button" id="togglePassword" aria-label="Tampilkan password">👁</button>
+      </div>
+      <button type="submit" class="admin-btn admin-btn-primary">Masuk Admin</button>
+      <p id="loginStatus" class="login-status" aria-live="polite"></p>
+    </form>
+    <a href="index.html" class="back-portfolio">← Kembali ke Portfolio</a>
+  </div>
+</div>
+<header class="admin-topbar"><a href="index.html" class="admin-brand">Bayu<span>.</span> Admin</a><div><a href="projects.html" class="admin-top-link">Lihat Projects</a><a href="index.html" class="admin-top-link">Portfolio</a><button id="logoutBtn" class="admin-top-link admin-top-button">Logout</button></div></header>
+<main class="admin-shell">
+  <section class="admin-hero"><div><span class="admin-kicker">CONTENT MANAGEMENT</span><h1>Kelola Project Portfolio</h1><p>Tambah banyak foto, deskripsi, kategori, dan link project. Setiap project memiliki gallery sendiri yang bisa berisi banyak foto dan langsung tampil di halaman detail project.</p></div><button id="resetData" class="admin-btn admin-btn-danger">Reset Data</button></section>
+  <section class="admin-grid">
+    <div class="admin-panel">
+      <div class="panel-title"><h2 id="formTitle">Tambah Project</h2><span id="editingBadge">NEW</span></div>
+      <form id="projectForm" class="admin-form">
+        <input type="hidden" id="projectId">
+        <label>Nama Project<input id="title" required maxlength="80" placeholder="Contoh: Website Sekolah"></label>
+        <label>Kategori<select id="category" required><option value="UI/UX Design">UI/UX Design</option><option value="Website">Website</option><option value="Graphic Design">Graphic Design</option><option value="Mobile App">Mobile App</option><option value="Other">Other</option></select></label>
+        <label>Deskripsi<textarea id="description" required maxlength="500" rows="6" placeholder="Jelaskan project, tujuan, fitur, atau proses pembuatannya..."></textarea><small><span id="charCount">0</span>/500</small></label>
+        <label>Link Project <span class="optional">(opsional)</span><input id="link" type="url" placeholder="https://..."></label>
+        <label>Foto-Foto Project <span class="optional">(bisa pilih banyak JPG/PNG/WebP)</span><input id="image" type="file" multiple accept="image/png,image/jpeg,image/webp"></label>
+        <div class="upload-help">Pilih beberapa foto sekaligus. Foto pertama otomatis menjadi <b>cover</b>. Saat edit, foto lama tetap ada dan kamu bisa menambah atau menghapus foto.</div><div id="imagePreview" class="image-preview"><span>Belum ada foto. Kamu bisa memilih banyak foto sekaligus.</span></div>
+        <div class="admin-form-actions"><button type="submit" class="admin-btn admin-btn-primary" id="saveBtn">Simpan Project</button><button type="button" class="admin-btn admin-btn-ghost" id="cancelEdit">Batal</button></div>
+        <p id="adminStatus" class="admin-status"></p>
+      </form>
+    </div>
+    <div class="admin-panel">
+      <div class="panel-title"><h2>Daftar Project</h2><strong id="adminCount">0</strong></div>
+      <div id="adminProjectList" class="admin-project-list"></div>
+    </div>
+  </section>
+  <section class="admin-note"><strong>Catatan koneksi:</strong> versi ini memakai <strong>PHP + MySQL</strong>. Foto dan data project tersimpan di server, sehingga project yang kamu tambah dari HP akan terlihat juga di laptop dan perangkat lain.</section>
+</main>
+<script src="js/projects.js"></script><script src="js/admin-login.js"></script><script src="js/admin.js"></script>
+</body></html>

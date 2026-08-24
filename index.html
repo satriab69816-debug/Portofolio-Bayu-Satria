@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bayu Satria — Software Developer Portfolio</title>
+<meta name="description" content="Portfolio of Putu Bayu Satria Wangsa Bukian, Vocational High School student majoring in Software Engineering (PPLG).">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Custom cursor blob (decorative, desktop only) ===== -->
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<!-- ===== Progress bar ===== -->
+<div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+
+<!-- ===== Navbar ===== -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">Bayu<span>.</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active" data-section="home">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn-primary nav-cta">Hire Me</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" class="mobile-link" data-section="home">Home</a>
+  <a href="#about" class="mobile-link" data-section="about">About</a>
+  <a href="#skills" class="mobile-link" data-section="skills">Skills</a>
+  <a href="projects.html" class="mobile-link">Projects</a>
+  <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+  <a href="#contact" class="btn btn-primary" style="margin-top:20px;">Hire Me</a>
+</div>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="blob blob-lime blob-1" aria-hidden="true"></div>
+    <div class="blob blob-purple blob-2" aria-hidden="true"></div>
+    <div class="blob blob-lime blob-3" aria-hidden="true"></div>
+
+    <div class="hero-inner reveal">
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <img src="assets/images/bayu-hero.png" class="profile-photo hero-profile-photo" alt="Bayu Satria" loading="eager">
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <span class="pill pill-lime">Hello I'm</span>
+        <h1 class="hero-name">Bayu Satria</h1>
+        <p class="full-name">Putu Bayu Satria Wangsa Bukian</p>
+        <span class="pill pill-purple rotate-tag">Software Developer</span>
+        <p class="hero-tagline">I build things from my creativity.</p>
+
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-solid-purple">View Project</a>
+          <a href="assets/CV-Bayu-Satria.pdf" download class="btn btn-lime">Download CV</a>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about">
+    <div class="stripe stripe-top" aria-hidden="true"></div>
+
+    <div class="about-inner">
+      <div class="about-photo reveal">
+        <img src="assets/images/bayu-cutout.png" class="profile-photo about-profile-photo" alt="Bayu Satria" loading="lazy">
+      </div>
+
+      <div class="about-text reveal">
+        <span class="eyebrow">About Me</span>
+        <p class="about-paragraph">
+          I’m Bayu - A dedicated Vocational High School student majoring in Software Engineering (PPLG) with a strong passion for software development. Possesses a solid foundation in web/application concepts and graphic design. Eager to contribute technical and creative skills in a dynamic software development environment.
+        </p>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <h3>Education</h3>
+            <p class="info-strong">2024 – Present</p>
+            <p class="info-strong">SMK Negeri 2 Kuta Selatan</p>
+            <p class="info-sub">Jurusan PPLG — Pengembangan Perangkat Lunak dan Gim</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Software</h3>
+            <div class="badge-grid">
+              <span class="badge">Canva</span>
+              <span class="badge">VS Code</span>
+              <span class="badge">Figma</span>
+              <span class="badge">Adobe XD</span>
+              <span class="badge">CapCut</span>
+              <span class="badge">Office</span>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Languages</h3>
+            <p class="info-strong">Indonesian <span class="dot-full" title="Native"></span></p>
+            <p class="info-strong">English <span class="dot-half" title="Conversational"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stripe stripe-bottom" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="skills">
+    <div class="section-heading">
+      <h2>Skills</h2>
+      <p>Tools and technologies I use to bring ideas to life.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon">&lt;/&gt;</div>
+        <h3>Frontend Development</h3>
+        <p>HTML5, CSS3, JavaScript</p>
+        <div class="skill-bar"><span data-percent="85"></span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">◆</div>
+        <h3>UI / UX Design</h3>
+        <p>Figma, Adobe XD, wireframing</p>
+        <div class="skill-bar"><span data-percent="80"></span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">✎</div>
+        <h3>Graphic Design</h3>
+        <p>Canva, poster & social media assets</p>
+        <div class="skill-bar"><span data-percent="90"></span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">✺</div>
+        <h3>AI-Assisted Workflow</h3>
+        <p>Prompting, content drafting, ideation</p>
+        <div class="skill-bar"><span data-percent="75"></span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">▣</div>
+        <h3>Video Editing</h3>
+        <p>CapCut, documentation & event content</p>
+        <div class="skill-bar"><span data-percent="70"></span></div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-icon">☰</div>
+        <h3>Team Coordination</h3>
+        <p>Planning, scheduling, leading a team</p>
+        <div class="skill-bar"><span data-percent="80"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORK EXPERIENCE ===== -->
+  <section class="experience">
+    <div class="section-heading light">
+      <h2>Work Experience</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2025 – Present</span>
+          <h3>Frontend Developer</h3>
+          <ul>
+            <li>Built and structured responsive web pages using clean HTML5 and CSS3 code.</li>
+            <li>Styled web layouts to ensure visually appealing and user-friendly interface displays.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2024 – Present</span>
+          <h3>UI/UX Designer</h3>
+          <ul>
+            <li>Designed intuitive UI/UX layouts, wireframes, and interactive prototypes using Figma.</li>
+            <li>Conducted user flow planning to create seamless digital experiences for web and mobile.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2024 – Present</span>
+          <h3>AI Tool Integration</h3>
+          <ul>
+            <li>Leveraged AI tools to optimize workflow, generate creative design assets, and streamline problem-solving.</li>
+            <li>Utilized AI-driven prompts to assist in content drafting, design ideation, and visual asset enhancement.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2025 – 2026</span>
+          <h3>Head of Documentation Division — Student Council (OSIS)</h3>
+          <ul>
+            <li>Led the documentation team in capturing, editing, and publishing photo and video content for major school events.</li>
+            <li>Designed visual promotional assets, posters, and social media content using Canva and Figma.</li>
+            <li>Coordinated team tasks, assigned equipment, and managed event schedules for seamless coverage.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="projects">
+    <div class="section-heading">
+      <h2>Project</h2>
+      <p>Explore my projects — click a card to see the full description.</p>
+    </div>
+
+    <div class="project-grid" id="homeProjectGrid"></div>
+    <div class="projects-more-wrap"><a href="projects.html" class="btn btn-solid-purple">View All Projects</a></div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact">
+    <div class="blob blob-lime blob-4" aria-hidden="true"></div>
+
+    <div class="contact-inner reveal">
+      <div class="contact-text">
+        <span class="eyebrow eyebrow-light">Get in touch</span>
+        <h2>Let's build something together.</h2>
+        <p>Have a project in mind, an internship opening, or just want to say
+          hi? My inbox is open.</p>
+
+        <div class="contact-details">
+          <a href="mailto:bayyrawr824@gmail.com" class="contact-line">
+            <span class="contact-label">Email</span> bayyrawr824@gmail.com
+          </a>
+          <a href="tel:+6287899233428" class="contact-line">
+            <span class="contact-label">Phone</span> +62 878-9923-3428
+          </a>
+          <span class="contact-line">
+            <span class="contact-label">Location</span> Bali, Indonesia
+          </span>
+        </div>
+
+        <div class="social-row">
+      <a href="https://wa.me/6287899233428" class="social-btn" aria-label="Whatsapp" target="_blank" rel="noopener noreferrer">WA</a>
+        
+          <a href="https://www.instagram.com/bayuu_satir?igsi=YnRocmVkc2cwZjZk" class="social-btn" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your name">
+          <span class="form-error" data-for="name"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+          <span class="form-error" data-for="email"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Tell me about your project..."></textarea>
+          <span class="form-error" data-for="message"></span>
+        </div>
+
+        <button type="submit" class="btn btn-lime btn-full">Send Message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Bayu Satria. Built with HTML, CSS &amp; JavaScript.</p>
+  <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+</footer>
+
+<script src="js/projects.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
